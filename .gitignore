@@ -1,0 +1,13 @@
+__pycache__/
+__pycache__/*
+build/
+build/*
+Output/
+Output/*
+
+# Proyect
+saves/
+*.txt
+*.spec
+
+venv/
