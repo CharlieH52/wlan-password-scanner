@@ -4,13 +4,13 @@ class Wlan:
     def __init__(self, ssid, password, upDate):
         self.ssid = ssid
         self.password = password
-        self.upDate = upDate
+        self.saveDate = upDate
 
     def to_dict(self):
         return {
             'ssid': self.ssid,
             'password': self.password,
-            'upDate': self.upDate
+            'upDate': self.saveDate
         }
 
     @staticmethod
