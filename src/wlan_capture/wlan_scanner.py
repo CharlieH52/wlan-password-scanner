@@ -1,7 +1,7 @@
 import os
 import re
 from datetime import date
-from src.command_processor import CommandProcessor
+from src.wlan_capture.command_processor import CommandProcessor
 
 workingPath = os.getcwd()
 storageFile = os.path.join(workingPath, 'localStorage.json')
