@@ -1,1 +1,25 @@
 # wlan_scanner
+
+## SQL DATABASE
+### CREATE THE TABLE
+```
+CREATE TABLE table_name (
+    id INT AUTO_INCREMENTAL PRIMARY KEY,
+    ssid VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(200) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+### CREATE AN UPDATE TRIGGER
+```
+CREATE TRIGGER trigger_name
+AFTER INSERT ON table_name
+FOR EACH ROW
+BEGIN
+    UPDATE table_name
+    SET updated_at = CURRENT_TIMESTAMP
+    WHERE id = NEW.id;
+END;
+```
