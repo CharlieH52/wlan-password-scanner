@@ -1,16 +1,14 @@
 import json
 
 class Wlan:
-    def __init__(self, ssid: str, password: str, upDate: str):
+    def __init__(self, ssid: str, password: str):
         self.ssid = ssid
         self.password = password
-        self.saveDate = upDate
 
     def to_dict(self) -> dict[str, str]:
         return {
             'ssid': self.ssid,
             'password': self.password,
-            'upDate': self.saveDate
         }
 
     @staticmethod
