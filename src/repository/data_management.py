@@ -1,7 +1,9 @@
 import os
 import json
 
-class Writer:    
+# OLD CODE UNUSED
+
+class DataManagement:    
     WORKING_PATH = os.getcwd()
     FILE_NAME = "localStorage.json"
     STORAGE_FILE = os.path.join(WORKING_PATH, FILE_NAME)
