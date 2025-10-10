@@ -1,20 +1,11 @@
-import os
-import re
-from datetime import date
 from services.command_processor import CommandProcessor
-
-workingPath = os.getcwd()
-storageFile = os.path.join(workingPath, 'localStorage.json')
+import re
 
 class WLANScanner:
     SEARCH_LINE = r'(?<=: ).*'
     CLEAN_LINE = r'(.*\s:\s)'
-
     CMD_SSID = ["netsh", "wlan", "show", "profiles"]
     CMD_PASSWORD = ["netsh", "wlan", "show", "profiles", "", "KEY=CLEAR"]
-    
-    def __init__(self):
-        self.today = date.strftime(date.today(),'%d-%m-%Y')
 
     def __parse_ssid_output(self, command_output: list[str]) -> list[str]:
         ssid_list = []
