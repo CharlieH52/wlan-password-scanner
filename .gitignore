@@ -1,5 +1,5 @@
 # SQLite bins
-src/bin/*
+bin/*
 *.db
 
 # Byte-compiled / optimized / DLL files
