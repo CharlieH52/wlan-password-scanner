@@ -11,6 +11,6 @@ def run():
         new_wlan = Wlan(ssid=wlan, password=pssw)    
 
         WlanSqlManagement(new_wlan).post_wlan()
-
+        WlanSqlManagement(new_wlan).send_to_remote()
 if __name__ == '__main__':
     run()
