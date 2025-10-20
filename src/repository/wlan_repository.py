@@ -7,8 +7,9 @@ import os
 
 class WlanSqlManagement:
     load_dotenv()
+    LOCAL = os.getenv("dblocal")
     # LocalStorage
-    DATABASE = os.path.join(os.getcwd(),'db\\wlan_backup.db')
+    DATABASE = os.path.join(os.getcwd(),f'{LOCAL}')
     db_conector = sqlite3.connect(DATABASE)
     cursor = db_conector.cursor()
 
