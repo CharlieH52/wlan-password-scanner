@@ -4,7 +4,7 @@ import os
 def build():
     # CONFIGURATION VARIABLES
     output_name = "WLAN_SCANNER"
-    main_script = "src/main.py"
+    main_script = "main.py"
 
     command_sequence = [
         "pyinstaller",
@@ -12,6 +12,9 @@ def build():
         "--onefile",
         "--clean",
         f"--name={output_name}",
+        "--add-data", "src/entities;entities",
+        "--add-data", "src/services;services",
+        "--add-data", "src/repository;repository",
         main_script
     ]
 

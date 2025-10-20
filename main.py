@@ -1,6 +1,6 @@
-from entities.wlan_class import Wlan
-from services.wlan_scanner import WLANScanner
-from repository.wlan_repository import WlanSqlManagement
+from src.entities.wlan_class import Wlan
+from src.services.wlan_scanner import WLANScanner
+from src.repository.wlan_repository import WlanSqlManagement
 
 ws = WLANScanner()
 
